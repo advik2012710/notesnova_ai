@@ -16,6 +16,7 @@ function Home() {
           <h1>🚀 NotesNova.ai</h1>
         </div>
         <div className="nav-links">
+          <Link to="/clock" className="btn-clock">🕐 World Clock</Link>
           <Link to="/login" className="btn-login">Login</Link>
           <Link to="/register" className="btn-register">Sign Up</Link>
         </div>
