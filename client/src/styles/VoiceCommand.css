@@ -1,0 +1,173 @@
+.voice-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  color: white;
+}
+
+.voice-navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.voice-navbar h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.voice-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.voice-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.voice-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.voice-main {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.microphone-button {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.microphone-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+.microphone-button.listening {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+  box-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+}
+
+.mic-icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.microphone-button p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sound-wave {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.wave {
+  width: 8px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+.transcript-box, .response-box {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.transcript-box h4, .response-box h4 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.transcript-box p, .response-box p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.speaking-indicator {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.voice-commands-help {
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.voice-commands-help h3 {
+  font-size: 22px;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.commands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.command-chip {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.command-chip:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
+}
+
+@media (max-width: 768px) {
+  .microphone-button {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mic-icon {
+    font-size: 70px;
+  }
+}
